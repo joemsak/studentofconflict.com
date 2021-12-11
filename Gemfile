@@ -26,3 +26,5 @@ group :development do
   gem "foreman"
   gem "standardrb"
 end
+
+gem "cssbundling-rails", "~> 0.2.7"
