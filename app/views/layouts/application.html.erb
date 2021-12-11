@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="bg-slate-100">
   <head>
-    <title>StudentofconflictCom</title>
+    <title><%= browser_title.html_safe %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,7 +10,22 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="container mx-auto bg-white p-4 border border-slate-300 rounded mt-4 drop-shadow">
-    <%= yield %>
+  <body>
+    <div class="relative bg-white overflow-hidden">
+      <div class="max-w-7xl mx-auto">
+        <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+          <%= render 'layouts/header' %>
+          <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+            <%= yield %>
+          </main>
+        </div>
+      </div>
+
+      <% if content_for?(:splash_image) %>
+        <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+          <%= yield :splash_image %>
+        </div>
+      <% end %>
+    </div>
   </body>
 </html>

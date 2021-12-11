@@ -1,2 +1,44 @@
-<h1>Home#show</h1>
-<p>Find me in app/views/home/show.html.erb</p>
+<div class="sm:text-center lg:text-left">
+  <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+    <span class="block"><%= t(".title") %></span>
+    <span class="block text-indigo-600"><%= t(".subtitle") %></span>
+  </h1>
+
+  <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+    <%= t(".pitch") %>
+  </p>
+
+  <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+    <div class="rounded-md shadow">
+      <%= link_to t("common.get_started").titleize,
+        "#",
+        class: %w[
+          w-full
+          flex
+          items-center
+          justify-center
+          px-8
+          py-3
+          border
+          border-transparent
+          text-base
+          font-medium
+          rounded-md
+          text-white
+          bg-indigo-600
+          hover:bg-indigo-700
+          md:py-4
+          md:text-lg
+          md:px-10
+        ]
+      %>
+    </div>
+  </div>
+</div>
+
+<% content_for :splash_image do %>
+  <%= image_tag "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80",
+    alt: "",
+    class: "h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+  %>
+<% end %>
