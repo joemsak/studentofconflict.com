@@ -13,6 +13,9 @@
   ],
   "environments": {
     "test": {
+      "env": {
+        "RAILS_ENV": "test"
+      },
       "scripts": {
         "test": "bundle exec rspec"
       }
