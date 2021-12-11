@@ -69,6 +69,9 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
   config.generators do |generate|
+    generate.helper false
+    generate.skip_routes true
+
     generate.test_framework :rspec,
       fixtures: true,
       view_specs: false,
@@ -77,6 +80,6 @@ Rails.application.configure do
       controller_specs: false,
       request_specs: true
 
-     generate.fixture_replacement :factory_bot, dir: "spec/factories"
+    generate.fixture_replacement :factory_bot, dir: "spec/factories"
   end
 end
