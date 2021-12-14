@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  main a:not(.btn) {
+    @apply text-green-700 hover:text-green-700;
+    @apply underline;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-block;
+    @apply text-center;
+    @apply px-8 md:px-10;
+    @apply py-3 md:py-4;
+    @apply border border-transparent;
+    @apply text-base md:text-lg;
+    @apply font-medium;
+    @apply rounded-md;
+    @apply text-white;
+    @apply bg-green-700 hover:bg-green-900;
+  }
+}

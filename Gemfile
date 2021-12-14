@@ -18,6 +18,7 @@ group :development, :test do
   gem "debug", ">= 1.0.0", platforms: %i[mri mingw x64_mingw]
   gem "rspec-rails"
   gem "factory_bot_rails"
+  gem "shoulda-matchers"
   gem "dotenv"
 end
 

@@ -1,0 +1,22 @@
+<h1 class="text-2xl text-green-800 font-bold">
+  <%= t("common.package").pluralize.capitalize %>
+</h1>
+
+<p class="mt-4">
+  All of my first-time clients who have already had a 
+  <%= link_to "free consultation",
+    "#",
+    class: "text-green-700 underline hover:text-green-900"
+  %>
+  must commit to starting our work together with a three month program.
+</p>
+
+<p class="mt-4">
+  Purchase a package of six sessions at a discounted rate, and schedule them within
+  a period of three months.
+</p>
+
+<%= link_to t("common.purchase_today").capitalize,
+  package_path(@package),
+  class: "btn mt-12" %>
+
