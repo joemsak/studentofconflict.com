@@ -1,9 +1,9 @@
 class PackagesController < ApplicationController
   def index
-    @package = Package.first || Package.new(id: 1)
+    @package = Package.three_month_starter
   end
 
   def show
-    @package = Package.find(params[:id])
+    @package = Package.friendly.find(params[:id])
   end
 end

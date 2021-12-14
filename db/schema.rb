@@ -16,11 +16,13 @@ ActiveRecord::Schema.define(version: 2021_12_14_225456) do
   enable_extension "plpgsql"
 
   create_table "packages", force: :cascade do |t|
-    t.string "name"
-    t.integer "price_cents"
+    t.string "name", null: false
+    t.integer "price_cents", null: false
     t.text "description"
+    t.string "slug", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["slug"], name: "index_packages_on_slug"
   end
 
 end

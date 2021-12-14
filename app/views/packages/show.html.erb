@@ -1,2 +1,7 @@
-<h1>Packages#show</h1>
-<p>Find me in app/views/packages/show.html.erb</p>
+<h1 class="text-2xl text-green-800 font-bold">
+  <%= @package.name %>
+</h1>
+
+<h2 class="text-xl"><%= humanized_money_with_symbol @package.price %></h2>
+
+<%= simple_format @package.description, class: "mt-4" %>
