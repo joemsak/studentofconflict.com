@@ -92,9 +92,9 @@
   >
     <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
       <div class="px-5 pt-4 flex items-center justify-between">
-        <div>
+        <%= link_to root_path do %>
           <%= image_tag "logo.jpg", alt: "logo", class: "h-8 w-auto rounded-full" %>
-        </div>
+        <% end %>
 
         <div class="-mr-2">
           <button
