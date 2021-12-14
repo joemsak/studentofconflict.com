@@ -8,7 +8,7 @@
   <polygon points="50,0 100,0 50,100 0,100" />
 </svg>
 
-<div>
+<div data-controller="reveal">
   <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
     <nav
       class="relative flex items-center justify-between sm:h-10 lg:justify-start"
@@ -27,6 +27,7 @@
 
           <div class="-mr-2 flex items-center md:hidden">
             <button
+              data-action="reveal#show"
               type="button"
               class="
                 bg-white
@@ -88,14 +89,17 @@
   <!--
     Mobile menu, show/hide based on menu open state.
 
-    Entering: "duration-150 ease-out"
-      From: "opacity-0 scale-95"
-      To: "opacity-100 scale-100"
-    Leaving: "duration-100 ease-in"
-      From: "opacity-100 scale-100"
-      To: "opacity-0 scale-95"
   -->
-  <div class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+  <div
+    data-reveal-target="item"
+    data-transition-enter="duration-150 ease-out"
+    data-transition-enter-start="opacity-0 scale-95"
+    data-transition-enter-end="opacity-100 scale-100"
+    data-transition-leave="duration-100 ease-in"
+    data-transition-leave-start="opacity-100 scale-100"
+    data-transition-leave-end="opacity-0 scale-95"
+    class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right hidden"
+  >
     <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
       <div class="px-5 pt-4 flex items-center justify-between">
         <div>
@@ -104,6 +108,7 @@
 
         <div class="-mr-2">
           <button
+            data-action="reveal#hide"
             type="button"
             class="
               bg-white
