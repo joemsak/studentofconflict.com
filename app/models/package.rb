@@ -19,11 +19,11 @@ class Package < ApplicationRecord
 
   def self.primary_starter
     return @primary_starter if @primary_starter
-  
+
     @primary_starter_mutex.synchronize do
       @primary_starter ||= find_or_create_by!(STOCK_ATTRIBUTES[:PRIMARY_STARTER])
     end
-  
+
     @primary_starter
   end
 end
