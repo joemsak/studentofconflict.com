@@ -35,4 +35,4 @@ gem "money-rails", "~> 1.15"
 
 gem "friendly_id", "~> 5.4"
 
-gem "airbrake", "~> 12.0"
+# gem "airbrake", "~> 12.0"
