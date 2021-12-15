@@ -34,3 +34,5 @@ gem "cssbundling-rails", "~> 0.2.7"
 gem "money-rails", "~> 1.15"
 
 gem "friendly_id", "~> 5.4"
+
+gem "airbrake", "~> 12.0"
