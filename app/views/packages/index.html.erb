@@ -3,7 +3,8 @@
 <p class="mt-4">
   All of my first-time clients who have already had a 
   <%= link_to "free consultation",
-    "#",
+    "javascript:;",
+    onclick: "Calendly.initPopupWidget({url: 'https://calendly.com/student-of-conflict/free-30-minute-consultation'});return false;",
     class: "text-green-700 underline hover:text-green-900"
   %>
   must commit to starting our work together with a three month program.
@@ -18,3 +19,7 @@
   package_path(@package),
   class: "btn mt-12" %>
 
+<% content_for :head do %>
+  <%= stylesheet_link_tag "https://assets.calendly.com/assets/external/widget.css" %>
+  <%= javascript_include_tag "https://assets.calendly.com/assets/external/widget.js", async: true %>
+<% end %>
