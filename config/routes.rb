@@ -4,5 +4,5 @@ Rails.application.routes.draw do
 
   resources :packages, only: [:show, :index]
 
-  root "homes#show"
+  root "home#show"
 end
