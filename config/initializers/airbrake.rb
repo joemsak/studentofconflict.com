@@ -9,8 +9,8 @@
 #
 # Configuration details:
 # https://github.com/airbrake/airbrake-ruby#configuration
-project_id = Rails.application.credentials.airbrake.project_id
-project_key = Rails.application.credentials.airbrake.project_key
+project_id = Rails.application.credentials.airbrake[:project_id]
+project_key = Rails.application.credentials.airbrake[:project_key]
 
 if project_id && project_key
   Airbrake.configure do |c|
